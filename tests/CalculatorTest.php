@@ -22,4 +22,36 @@ class CalculatorTest extends TestCase
             "La méthode sum() ne fonctionne plus :-("
         );
     }
+
+    public function testMultiplication(): void
+    {
+        // Arrange
+        $firstValue = 6;
+        $secondValue = 7;
+        $expectedResult = 42;
+
+        // Act
+        $calculator = new Calculator();
+        $multiplication = $calculator->multiplication($firstValue, $secondValue);
+
+        // Assert
+        $this->assertSame($expectedResult, $multiplication,
+            "La methode multiplication() ne fonctionne plus ;-)"
+        );
+    }
+
+    public function testIsEven(): void
+    {
+        // Arrange
+        $value = 6;
+        $expectedResult = true;
+
+        // Act
+        $calculator = new Calculator();
+        $isEven = $calculator->isEven($value);
+
+        // Assert
+        $this->assertTrue($expectedResult, $isEven,
+        );
+    }
 }
